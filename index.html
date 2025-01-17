@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>MOS Test</title>
+    </head>
+
+    <body>
+
+        <!-- 注意書きなど -->
+        <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
+            <p>
+                <h1>MOS Test</h1>
+
+                Thank you for your cooperation in my experiment.</br>
+                This experiment is MOS test.</br>
+                Listen to the voices and give it the score you think it deserves.</br>
+                I will explain the experimental procedure.
+
+                <h2>Experimental Procedure</h2>
+                <ol>
+                    <li>Enter your name and select the set list 1.</li>
+                    <li>Press "Start Experiment" button.</li>
+                    <li>Listen to the voices and give it the score you think it deserves.<br>
+                        The evaluation criteria is naturalness (High naturalness represents high quality natural speech).</li>
+                    <li>Press "next" button and start next evaluation.</li>
+                    <li>When you finish this experiment, press "finish" button and download the result.</li>
+                </ol>
+
+                <h2>Notes</h2>
+                <ul>
+                    <li>This experiment takes about 7 minutes.</li>
+                    <li>Please do not update the page during this experiment.</li>
+                    <li>You may not be able to download the results on your phone, so please use your PC.</li>
+                    <li>Please use headphones for this experiment.</li>
+                </ul>
+
+                <h2>実験手順</h2>
+                <ol>
+                    <li>"Your name"にアンケート用の名前を入力し、"Setlist number"に1のセット番号を選んで下さい。</li>
+                    <li>"next"を押して下さい。</li>
+                    <li>音声を聴き、相応しいと思った評価を選択して下さい。評価基準は自然性（高自然性：音質が高くて人間によく似る）です。<br>
+                        （評価レベル：５-Excellent 4-Good 3-Fair 2-Poor 1-Bad）</li>
+                    <li>選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
+                    <li>評価実験を全て終えたら"finish"ボタンを押して結果のcsvファイルをダウンロードして下さい。</li>
+                    <li>ウェブページを再読み込んで、"Your name"に名前（CrowdWorksのユーザ名）を入力しで下さい。</li>
+                    <!-- <li>手順２〜５を一回繰り返して下さい。</li>
+                    <li>二つのcsvファイルは添付して下さい。</li> -->
+                </ol>
+
+                <h2>注意</h2>
+                <ul>
+                    <li>この実験は凡そ7分ほど要します。</li>
+                    <li>実験中はページの再読み込みは行わないで下さい。</li>
+                    <li>スマートフォンでは結果をダウンロードできない場合があるのでPCを使用して下さい。</li>
+                    <li>ヘッドホンやイヤホンを着用した状態で行って下さい。</li>
+                </ul>
+            </p>
+        </div>
+
+        <script type="text/javascript" src="mos.js"></script>
+
+        <div id="Display1">
+            <p> Your name: <br>
+            <input type="text" id="name" value=""></p>
+            <p> Setlist number: <br>
+            <label><input type="radio" name="set" id="number" value="1">1</label><br>
+            <p>
+            <button id="next1" onclick="start_experiment()">next</button>
+            </p>
+        </div>
+
+
+        <div id="Display2" style="display:none;">
+        <!-- 注意書きなど <body onload="init()"> -->
+            <p id="page"></p>
+            <p id="audio"></p>
+            <p>
+            <label><input type="radio" name="eval" onclick="evaluation()">Excellent</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Good</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Fair</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Poor</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Bad</label><br>
+        </p>
+
+        <p>
+        <button id="prev" onclick="prev()">prev</button>
+        <button id="next2" onclick="next()">next</button>
+        <button id="finish" onclick="finish()">finish</button>
+        </p>
+
+
+    </body>
+
+</html>
