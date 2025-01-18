@@ -48,17 +48,12 @@ function start_experiment() {
         includes different number of methods.
     */
     if (set_num == "1") {
-        method_paths.push(wav_dir + "set" + set_num + "/c_base1.list");
-		method_paths.push(wav_dir + "set" + set_num + "/c_m1.list");
-		method_paths.push(wav_dir + "set" + set_num + "/c_m2.list");
-		method_paths.push(wav_dir + "set" + set_num + "/c_m3.list");
-		method_paths.push(wav_dir + "set" + set_num + "/el.list");
-		method_paths.push(wav_dir + "set" + set_num + "/nr_base1.list");
-		method_paths.push(wav_dir + "set" + set_num + "/nr_el.list");
-		method_paths.push(wav_dir + "set" + set_num + "/nr_m1.list");
-		method_paths.push(wav_dir + "set" + set_num + "/nr_m2.list");
-		method_paths.push(wav_dir + "set" + set_num + "/nr_m3.list");
-		method_paths.push(wav_dir + "set" + set_num + "/trg.list");
+        	method_paths.push(wav_dir + "set" + set_num + "/BL-slt.list");
+		method_paths.push(wav_dir + "set" + set_num + "/BL.list");
+		method_paths.push(wav_dir + "set" + set_num + "/M1-sd.list");
+		method_paths.push(wav_dir + "set" + set_num + "/M1.list");
+		method_paths.push(wav_dir + "set" + set_num + "/Sr-el.list");
+		method_paths.push(wav_dir + "set" + set_num + "/Tr-nl.list");
     }
     /*
         end
